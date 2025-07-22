@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+   <bean id="customerbean" class="SpringHandson.spring1.Customer">
+   <property name="custId" value="1"/>
+   <property name="emailId" value="abc@gmail.com"/>
+   <property name="contactNo" value="12334545"/>
+   <property name="custName" value="Priyanshu"/>
+   </bean>
+   <bean id="membership" class="SpringHandson.spring1.MemberShip">
+   <property name="memberId" value="101"/>
+   <property name="visitsperYear" value="3"/>
+   <property name="membershipType" value="gold"/>
+   <property name="customer" ref="customerbean"/>
+   </bean>
+
+</beans>
